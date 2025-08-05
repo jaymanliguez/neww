@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skin Bloom</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo2.png" alt="Lustra Belle Logo">
+      <span class="logoname">Skin Bloom</span><span class="logo-subtitle">- CRM</span>
+    </div>
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="homepage.html" class="active">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="help.html">HELP</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="sign.html">SIGN IN</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <img class="about-hero-bg" src="brushes2.jpg" alt="About Us Background"/>
+      <div class="about-hero-content">
+        <h1>About us</h1>
+        <p class="about-hero-desc">
+          Lustra Belle’s company and culture are a lot like our product.<br>
+          They’re crafted, not cobbled, for a delightful experience
+        </p>
+        <a href="contact.html" class="btn-sales">Talk to sales</a>
+      </div>
+    </section>
+
+    <section class="about-details">
+      <p>
+        At Lustra Belle, we believe building meaningful customer relationships is the foundation of every successful business.<br>
+        Founded with a mission to help small and growing businesses streamline their customer management, we’ve created a powerful yet easy-to-use CRM platform that helps you organize contacts, close deals, and scale faster.
+      </p>
+      <p>
+        Our platform is designed to simplify the way teams work—helping sales, support, and marketing stay connected, automate repetitive tasks, and focus on what matters most: growing your business.
+      </p>
+      <h2>Our Mission</h2>
+      <p>
+        To empower businesses of all sizes with the tools and insights they need to build stronger relationships, deliver exceptional customer experiences, and drive sustainable growth.
+      </p>
+      <h2>Our Vision</h2>
+      <p>
+        To be the CRM platform that inspires businesses to bloom and thrive through meaningful connections.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2023 Lustra Belle CRM. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPage = location.pathname.split('/').pop();
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

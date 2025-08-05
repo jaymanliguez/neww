@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skin Bloom</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sign In Popup -->
+  <div id="signin-popup" class="signin-popup-bg" style="display:none;">
+    <div class="signin-popup">
+      <button class="signin-close" onclick="document.getElementById('signin-popup').style.display='none'">&times;</button>
+      <div class="signin-content">
+        <h2>Sign in</h2>
+        <p>Please enter your details.</p>
+        <button class="signin-apple"><img src="apple-logo.svg" alt="Apple" style="height:20px;vertical-align:middle;margin-right:8px;">Log in with apple</button>
+        <div class="signin-divider"><span>or</span></div>
+        <form>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <div class="signin-options">
+            <label><input type="checkbox"> Remember</label>
+            <a href="#" class="signin-forgot">forgot password?</a>
+          </div>
+          <button type="submit" class="signin-submit">Log in</button>
+        </form>
+        <div class="signin-footer">
+          Don’t have an account? <a href="#">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('signin-trigger').onclick = function(e) {
+      e.preventDefault();
+      document.getElementById('signin-popup').style.display = 'flex';
+    };
+  </script>
+</body>
+</html>

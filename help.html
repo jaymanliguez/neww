@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skin Bloom</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo2.png" alt="Lustra Belle Logo">
+      <span class="logoname">Skin Bloom</span><span class="logo-subtitle">- CRM</span>
+    </div>
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="homepage.html" class="active">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="help.html">HELP</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="sign.html">SIGN IN</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="help-main">
+    <h1 class="help-title">How can we help you?</h1>
+    <form class="help-search-form">
+      <img src="magnifying.png" alt="Search" class="search-img" />
+      <input type="text" class="help-search-input" placeholder="Search something" />
+    </form>
+    <div class="help-popular">
+      <span class="help-popular-label">Popular searches</span>
+      <div class="help-popular-tags">
+        <span class="help-tag"><img src="magnifying.png" alt="Search" class="tag-img" /> sales</span>
+        <span class="help-tag"><img src="magnifying.png" alt="Search" class="tag-img" /> status</span>
+        <span class="help-tag"><img src="magnifying.png" alt="Search" class="tag-img" /> order</span>
+        <span class="help-tag"><img src="magnifying.png" alt="Search" class="tag-img" /> products</span>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPage = location.pathname.split('/').pop();
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

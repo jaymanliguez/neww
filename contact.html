@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skin Bloom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="contact-bg">
+    <div class="contact-popup">
+      <a href="homepage.html" class="contact-close" aria-label="Close" >&times;</a>
+      <h2>Contact Us</h2>
+      <p class="contact-subtitle">Send Message</p>
+      <form class="contact-form">
+        <div class="contact-field">
+          <input type="text" placeholder="Name" required style="font-family:Arial, FontAwesome"/>
+        </div>
+        <div class="contact-field">
+          <input type="email" placeholder="Email" required style="font-family:Arial, FontAwesome"/>
+        </div>
+        <div class="contact-field">
+          <input type="tel" placeholder="Phone" required style="font-family:Arial, FontAwesome"/>
+        </div>
+        <div class="contact-field">
+          <textarea placeholder="Message..." rows="4" required></textarea>
+        </div>
+        <button type="submit" class="contact-submit">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPage = location.pathname.split('/').pop();
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
